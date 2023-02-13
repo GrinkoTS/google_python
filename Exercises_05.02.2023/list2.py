@@ -14,8 +14,8 @@
 # modify the passed in list.
 def remove_adjacent(nums):
   nums = set(nums)
-  print(list(nums))
-  return
+  nums = list(nums)
+  return nums
 
 #one_more_option
 
@@ -28,8 +28,7 @@ def remove_adjacent(nums):
       continue
     else:
       s1.append(i)
-  print(s1)
-  return
+  return s1
 
 
 
@@ -44,7 +43,7 @@ def linear_merge(list1, list2):
       result.append(list1.pop(0))
     else:
       result.append(list2.pop(0))
-  print(result + list1 + list2)
+  result = result + list1 + list2
   return result
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
@@ -63,18 +62,18 @@ def test(got, expected):
     prefix = ' OK '
   else:
     prefix = '  X '
-  print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
+  print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
 
 # Calls the above functions with interesting inputs.
 def main():
-  print 'remove_adjacent'
+  print('remove_adjacent')
   test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
   test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
   test(remove_adjacent([]), [])
 
   print
-  print 'linear_merge'
+  print('linear_merge')
   test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
        ['aa', 'bb', 'cc', 'xx', 'zz'])
   test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
