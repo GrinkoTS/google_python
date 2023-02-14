@@ -1,6 +1,6 @@
 import random
 
-with open('../Exercises_05.02.2023/alice.txt', 'r') as f:
+with open('Exercises_05.02.2023/alice.txt', 'r') as f:
     text = f.read()
     text = text.lower().split()
 result = {}
